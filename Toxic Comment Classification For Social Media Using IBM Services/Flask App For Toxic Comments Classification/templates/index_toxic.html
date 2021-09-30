@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("https://miro.medium.com/max/1000/0*pyUdGjbHsZhmu7W9");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+  <i><center><title>Toxic Comment Predictor</title></center></i>
+</head>
+<body>
+ <div>
+
+ </div>
+
+
+<body onload="myFunction()">
+ <div class="login">
+	<i><u><center><h1 style="color:#000000;">Check if your comment is toxic? Be a Force of Good not Bad!</h1></center></u></i>
+
+     <!-- Main Input For Receiving Query to our ML -->
+   <center><form action="{{ url_for('predict')}}"method="post">
+    	<input id='text' type="text" name="text" placeholder="Enter your text" required="required" size="25" style="font-size:25px;"/>
+
+    <button id='button' type="submit" class="btn btn-primary btn-block btn-large" style="font-size: 25px;"> Predict</button>
+    </form>
+</center>
+<i><u><h2 style="color:#000000;">Probability of Toxicity</h2></u></i>
+<i><h3 style="color:#000000;">
+<br>
+    {{ pred_tox }} <br><br>
+    {{ pred_sev }} <br><br>
+    {{ pred_obs }} <br><br>
+    {{ pred_ins }} <br><br>
+    {{ pred_thr }} <br><br>
+    {{ pred_ide }}</h3></i>
+
+<center><img src="https://lifefalcon.com/wp-content/uploads/2020/05/Toxic-people-quotes-to-motivate-yourself.jpg?ezimgfmt=ng:webp/ngcb81"  alt="There was supposed to be or logo here!" width="375" height="250"></center>
+ </div>
+</body>
+</html>
